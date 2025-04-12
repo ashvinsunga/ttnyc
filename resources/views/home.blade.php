@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+    {{-- Home --}}
     <section id="home" class="">
         <div class="container">
             <h5>NEW ARRIVALS</h5>
@@ -10,6 +11,7 @@
         </div>
     </section>
 
+    {{-- Brands --}}
     <section id="brand" class="container">
         <div class="row">
             <img src="{{ asset('images/brand1.PNG') }}"class="img-fluid col-lg-3 col-md-6 col-sm-12">
@@ -19,6 +21,7 @@
         </div>
     </section>
 
+    {{-- New Arrivals --}}
     <section id="new" class="w-100">
         <div class="row p-0 m-0 m-auto">
             {{-- One --}}
@@ -50,10 +53,11 @@
         </div>
     </section>
 
+    {{-- Featured Products --}}
     <section id="featured" class="my-5 pb-5">
         <div class="container text-center mt-5 py-5">
             <h3>Featured</h3>
-            <hr>
+            <hr class="mx-auto">
             <p>Please check our featured products</p>
         </div>
 
@@ -116,4 +120,264 @@
 
         </div>
     </section>
+
+    {{-- Banner --}}
+    <section id="banner">
+        <div class="container">
+            <h4>MID SEASON SALE</h4>
+            <h1>Spring Collection <br> Up to 50% off</h1>
+            <button>SHOP NOW</button>
+        </div>
+    </section>
+
+    {{-- Clothes --}}
+    <section id="clothes" class="my-5 pb-5">
+        <div class="container text-center mt-5 py-5">
+            <h3>Dresses & Coats</h3>
+            <hr class="mx-auto">
+            <p>Please check our amazing collection of clothes</p>
+        </div>
+
+        <div class="row mx-auto container-fluid">
+            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                <img src="{{ asset('images/clothes1.jpg') }}" class="img-fluid mb-3">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sports Bags</h5>
+                <h4 class="p-price">$100.99</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                <img src="{{ asset('images/clothes2.jpg') }}" class="img-fluid mb-3">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sports Bags</h5>
+                <h4 class="p-price">$100.99</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                <img src="{{ asset('images/clothes3.jpg') }}" class="img-fluid mb-3">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sports Bags</h5>
+                <h4 class="p-price">$100.99</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                <img src="{{ asset('images/clothes4.jpg') }}" class="img-fluid mb-3">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sports Bags</h5>
+                <h4 class="p-price">$100.99</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    {{-- Shoes --}}
+    <section id="shoes" class="my-5 pb-5">
+        <div class="container text-center mt-5 py-5">
+            <h3>Shoes</h3>
+            <hr class="mx-auto">
+            <p>Please check our amazing collection of shoes</p>
+        </div>
+
+        <div class="row mx-auto container-fluid">
+            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                <img src="{{ asset('images/shoes1.jpg') }}" class="img-fluid mb-3">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sports Bags</h5>
+                <h4 class="p-price">$100.99</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                <img src="{{ asset('images/shoes2.jpg') }}" class="img-fluid mb-3">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sports Bags</h5>
+                <h4 class="p-price">$100.99</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                <img src="{{ asset('images/shoes3.jpg') }}" class="img-fluid mb-3">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sports Bags</h5>
+                <h4 class="p-price">$100.99</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                <img src="{{ asset('images/shoes4.jpg') }}" class="img-fluid mb-3">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sports Bags</h5>
+                <h4 class="p-price">$100.99</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    {{-- Watches --}}
+    <section id="watches" class="my-5 pb-5">
+        <div class="container text-center mt-5 py-5">
+            <h3>Best Watches</h3>
+            <hr class="mx-auto">
+            <p>Please check our unique collection of watches</p>
+        </div>
+
+        <div class="row mx-auto container-fluid">
+            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                <img src="{{ asset('images/watch1.jpg') }}" class="img-fluid mb-3">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sports Bags</h5>
+                <h4 class="p-price">$100.99</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                <img src="{{ asset('images/watch2.jpg') }}" class="img-fluid mb-3">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sports Bags</h5>
+                <h4 class="p-price">$100.99</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                <img src="{{ asset('images/watch3.jpg') }}" class="img-fluid mb-3">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sports Bags</h5>
+                <h4 class="p-price">$100.99</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                <img src="{{ asset('images/watch4.jpg') }}" class="img-fluid mb-3">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sports Bags</h5>
+                <h4 class="p-price">$100.99</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    {{-- Footer --}}
+    <footer class="mt-5 py-5">
+        <div class="row">
+            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
+                <img src="">
+                <p class="pt-3">We provide the best products for the most affordable prices</p>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
+                <h5 class="pb-2">Featured</h5>
+                <ul class="text-uppercase">
+                    <li><a href="">men</a></li>
+                    <li><a href="">women</a></li>
+                    <li><a href="">boys</a></li>
+                    <li><a href="">girls</a></li>
+                    <li><a href="">new arrivals</a></li>
+                    <li><a href="">clothes</a></li>
+                </ul>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
+                <h5 class="pb-2">Contact Us</h5>
+                <div>
+                    <h6 class="text-uppercase">Address</h6>
+                    <p>1234 Brookly New York City</p>
+                </div>
+                <div>
+                    <h6 class="text-uppercase">Phone</h6>
+                    <p>1234 448 486</p>
+                </div>
+                <div>
+                    <h6 class="text-uppercase">Email</h6>
+                    <p>ttnyc@yahoo.com</p>
+                </div>
+            </div>
+
+            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
+                <h5 class="pb-2">Instagram</h5>
+                <div class="row">
+                    <img src="{{ asset('footer1.jpg') }}" class="img-fluid w-25 h-100 m-2">
+                    <img src="{{ asset('footer1.jpg') }}" class="img-fluid w-25 h-100 m-2">
+                    <img src="{{ asset('footer1.jpg') }}" class="img-fluid w-25 h-100 m-2">
+                    <img src="{{ asset('footer1.jpg') }}" class="img-fluid w-25 h-100 m-2">
+                    <img src="{{ asset('footer1.jpg') }}" class="img-fluid w-25 h-100 m-2">
+                </div>
+            </div>
+        </div>
+    </footer>
 @endsection
