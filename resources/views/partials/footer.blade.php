@@ -40,6 +40,7 @@
                     <img src="{{ asset('images/1.jpg') }}" class="img-fluid w-25 h-100 m-2">
                     <img src="{{ asset('images/featured3.jpg') }}" class="img-fluid w-25 h-100 m-2">
                     <img src="{{ asset('images/watch1.jpg') }}" class="img-fluid w-25 h-100 m-2">
+                    <img src="{{ asset('images/watch2.jpg') }}" class="img-fluid w-25 h-100 m-2">
                 </div>
             </div>
         </div>
