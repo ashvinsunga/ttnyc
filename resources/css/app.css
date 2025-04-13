@@ -13,6 +13,10 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+#navbarNav {
+    padding-right: 120px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -23,12 +27,19 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.navbar .brand {
+    color: gold;
+    margin: 1px 20px;
+    font-size: 1.5rem;
+}
+
 .navbar {
     font-size: 16px;
     /* padding-top: 2rem !important;
     padding-bottom: 2rem !important; */
     top: 0;
     left: 0;
+    box-shadow: 0 2px 3px goldenrod;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -219,4 +230,59 @@ hr {
 
 #banner button:hover {
     background-color: black;
+}
+
+footer {
+    background-color: black;
+}
+
+footer h5 {
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+footer li {
+    padding-bottom: 4px;
+}
+
+footer li a {
+    font-size: 0.8rem;
+    color: gray;
+    text-decoration: none;
+}
+
+footer li a:hover {
+    color: white;
+}
+
+footer .copyright a {
+    color: black;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    margin: 0 5px;
+}
+
+footer .copyright a:hover {
+    color: white;
+    background-color: goldenrod;
+}
+
+footer p {
+    color: white;
+}
+
+footer .copyright img {
+    width: 40%;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
 }
