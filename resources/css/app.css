@@ -286,3 +286,13 @@ footer .copyright img {
     width: 80px;
     height: auto;
 }
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    flex-basis: 20%;
+    cursor: pointer;
+}
