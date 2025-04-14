@@ -1,10 +1,12 @@
 @extends('layouts.main')
 
+
+
 @section('content')
     {{-- Featured Products --}}
     <section id="featured" class="my-5 py-3">
         <div class="container mt-5 py-5">
-            <h3>Featured</h3>
+            <h3>Our Products</h3>
             <hr class="">
             <p>Please check our featured products</p>
         </div>
@@ -178,6 +180,22 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
 
+
+            {{-- Once data is being pulled out from a database, use laravel built in pagination --}}
+            <nav aria-label="Page navigation example">
+                <ul class="pagination mt-5">
+                    <li class="page-item"><a href="#" class="page-link">Previous</a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                </ul>
+            </nav>
+
         </div>
     </section>
+
+    @push('styles')
+        <link rel="stylesheet" href="{{ asset('css/shop.css') }}">
+    @endpush
 @endsection
