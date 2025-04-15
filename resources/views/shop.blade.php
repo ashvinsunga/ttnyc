@@ -13,7 +13,8 @@
 
         <div class="row mx-auto container-fluid">
             <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img src="{{ asset('images/featured1.jpg') }}" class="img-fluid mb-3">
+                <img onclick="window.location='{{ route('single_product') }}'" src="{{ asset('images/featured1.jpg') }}"
+                    class="img-fluid mb-3">
                 <div class="star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
