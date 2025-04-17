@@ -417,3 +417,51 @@ td:last-child {
 #login-form #register-url {
     color: goldenrod
 }
+
+/* Register */
+
+#register-form {
+    width: 50%;
+    margin: 5px auto;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid goldenrod;
+}
+
+#register-form input {
+    width: 50%;
+    margin: 5px auto;
+}
+
+#register-form #register-btn {
+    background-color: goldenrod;
+    color: white
+}
+
+#register-form #login-url {
+    color: goldenrod
+}
+
+/* Account */
+
+#account-form {
+    width: 50%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#account-form input {
+    margin: 5px auto;
+}
+
+#account-form #change-pass-btn {
+    color: white;
+    background-color: goldenrod;
+}
+
+/* Change Password */
+
+.account-info #order-btn, #logout-btn {
+    color: goldenrod;
+    text-decoration: none;
+}
