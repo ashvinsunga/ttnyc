@@ -36,6 +36,38 @@
 
                 </form>
             </div>
+
+
+            {{-- Orders --}}
+
+            <section class="orders container py-5">
+                <div class="container">
+                    <h2 class="font-weight-bold text-center">Your Orders</h2>
+                    <hr class="mx-auto">
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Date</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="product-info">
+                                <img src="{{ asset('images/featured1.jpg') }}">
+                                <div>
+                                    <p class="mt-3">White Shoes</p>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <span>2025-04-20</span>
+                        </td>
+                    </tr>
+                </table>
+            </section>
         </div>
     </section>
 @endsection

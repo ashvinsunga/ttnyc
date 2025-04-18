@@ -465,3 +465,60 @@ td:last-child {
     color: goldenrod;
     text-decoration: none;
 }
+
+/* Order */
+
+.orders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.orders .product-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.orders th {
+    text-align: left;
+    padding: 5px 10px;
+    color: white;
+    background-color: goldenrod;
+}
+
+.orders td {
+    padding: 10px 20px;
+}
+
+.orders th:nth-child(2){
+    text-align: right;
+}
+
+.orders td img {
+    width: 10rem;
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Checkout */
+
+#checkout-form .checkout-small-element{
+    display: inline-block;
+    width: 48%;
+    margin: 10px auto;
+}
+
+
+#checkout-form .checkout-large-element{
+    width: 96.5%;
+}
+
+#checkout-form .checkout-btn-container{
+    margin: 10px;
+    text-align: right;
+    margin-right: 40px;
+}
+
+#checkout-form #checkout-btn{
+    color: white;
+    background-color: goldenrod;
+}

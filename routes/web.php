@@ -30,3 +30,7 @@ Route::get('/register', function () {
 Route::get('/account', function () {
     return view('account');
 })->name('account');
+
+Route::get('/checkout', function () {
+    return view('checkout');
+})->name('checkout');
