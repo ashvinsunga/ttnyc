@@ -22,11 +22,19 @@
                     <a class="nav-link" href="{{ url('/blog') }}">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">Contact us</a>
+                    <a class="nav-link {{ request()->routeIs('contact_us') ? 'active' : '' }}"
+                        href="{{ route('contact_us') }}"> Contact us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link icons">
+                    <a class="nav-link icons {{ request()->routeIs('cart') ? 'active' : '' }}"
+                        href="{{ route('cart') }}">
                         <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link icons {{ request()->routeIs('account') ? 'active' : '' }}"
+                        href="{{ route('account') }}">
                         <i class="fa-solid fa-user"></i>
                     </a>
                 </li>
@@ -43,15 +51,15 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
                                 <a class="dropdown-item" "
-                                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                                            Logout
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                                <form id="logout-form" method="POST" style="display: none;">
-                                                    @csrf
-                                                </form>
-                                                </li>
+                                                                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                                                    Logout
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <form id="logout-form" method="POST" style="display: none;">
+                                                                            @csrf
+                                                                        </form>
+                                                                        </li>
             @endguest
             </ul>
         </div>

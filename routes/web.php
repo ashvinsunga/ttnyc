@@ -34,3 +34,7 @@ Route::get('/account', function () {
 Route::get('/checkout', function () {
     return view('checkout');
 })->name('checkout');
+
+Route::get('/contact_us', function () {
+    return view('contact');
+})->name('contact_us');

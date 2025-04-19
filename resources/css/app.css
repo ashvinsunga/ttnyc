@@ -522,3 +522,9 @@ td:last-child {
     color: white;
     background-color: goldenrod;
 }
+
+/* Contact */
+
+#contact span {
+    color: goldenrod;
+}
