@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('product_id');
             $table->string('product_name', 100);
             $table->string('product_category', 100);
-            $table->string('product_description', 255);
+            $table->text('product_description', 255);
             $table->string('product_image', 255);
             $table->string('product_image2', 255);
             $table->string('product_image3', 255);
