@@ -6,36 +6,31 @@
 
             <div class="row mt-5">
                 <div class="col-lg-5 col-md-6 col-sm-12">
-                    <img src="{{ asset('images/featured1.jpg') }}" id="mainImg" class="img-fluid pb-1">
+                    <img src="{{ asset('images/' . $product->product_image) }}" id="mainImg" class="img-fluid pb-1">
                     <div class="small-img-group">
                         <div class="small-img-col">
-                            <img src="{{ asset('images/featured2.jpg') }}" class="small-img w-100">
+                            <img src="{{ asset('images/' . $product->product_image) }}" class="small-img w-100">
                         </div>
                         <div class="small-img-col">
-                            <img src="{{ asset('images/featured3.jpg') }}" class="small-img w-100">
+                            <img src="{{ asset('images/' . $product->product_image2) }}" class="small-img w-100">
                         </div>
                         <div class="small-img-col">
-                            <img src="{{ asset('images/featured4.jpg') }}" class="small-img w-100">
+                            <img src="{{ asset('images/' . $product->product_image3) }}" class="small-img w-100">
                         </div>
                         <div class="small-img-col">
-                            <img src="{{ asset('images/clothes1.jpg') }}" class="small-img w-100">
+                            <img src="{{ asset('images/' . $product->product_image4) }}" class="small-img w-100">
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <h6>Men/Shoes</h6>
-                    <h3 class="py-4">Men's Fashion</h3>
-                    <h2>155$</h2>
+                    <h3 class="py-4">{{ $product->product_name }}</h3>
+                    <h2>{{ $product->product_price }}</h2>
                     <input type="number" value="1" />
                     <button class="buy-btn">Add to Cart</button>
                     <h4 class="mt-5 mb-5">Product Details</h4>
-                    <span>The details of this product will be displayed shortly.
-                        The details of this product will be displayed shortly.
-                        The details of this product will be displayed shortly.
-                        The details of this product will be displayed shortly.
-                        The details of this product will be displayed shortly.
-                    </span>
+                    <span>{{ $product->product_description }}</span>
                 </div>
 
             </div>

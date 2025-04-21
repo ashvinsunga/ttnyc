@@ -75,7 +75,8 @@
                     </div>
                     <h5 class="p-name">{{ $product->product_name }}</h5>
                     <h4 class="p-price">{{ $product->product_price }}</h4>
-                    <button class="buy-btn">Buy Now</button>
+                    <a href="{{ route('products.show', $product->product_id) }}"><button class="buy-btn">Buy
+                            Now</button></a>
                 </div>
             @endforeach
 
@@ -100,61 +101,23 @@
         </div>
 
         <div class="row mx-auto container-fluid">
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img src="{{ asset('images/clothes1.jpg') }}" class="img-fluid mb-3">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Sports Bags</h5>
-                <h4 class="p-price">$100.99</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
 
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img src="{{ asset('images/clothes2.jpg') }}" class="img-fluid mb-3">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+            @foreach ($clothes as $clothe)
+                <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                    <img src="{{ asset('images/' . $clothe->product_image) }}" class="img-fluid mb-3">
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h5 class="p-name">{{ $clothe->product_name }}</h5>
+                    <h4 class="p-price">{{ $clothe->product_price }}</h4>
+                    <a href="{{ route('products.show', $clothe->product_id) }}"><button class="buy-btn">Buy
+                            Now</button></a>
                 </div>
-                <h5 class="p-name">Sports Bags</h5>
-                <h4 class="p-price">$100.99</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img src="{{ asset('images/clothes3.jpg') }}" class="img-fluid mb-3">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Sports Bags</h5>
-                <h4 class="p-price">$100.99</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img src="{{ asset('images/clothes4.jpg') }}" class="img-fluid mb-3">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Sports Bags</h5>
-                <h4 class="p-price">$100.99</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
+            @endforeach
 
         </div>
     </section>

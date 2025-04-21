@@ -11,4 +11,5 @@ class Product extends Model
     use HasFactory;
 
     public $timestamps = false;
+    protected $primaryKey = 'product_id';
 }

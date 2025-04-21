@@ -18,13 +18,13 @@ class ProductFactory extends Factory
     {
         return [
             //
-            'product_name' => fake()->word() . ' Shoes',
-            'product_category' => 'Shoes',
+            'product_name' => fake()->word() . 'Shoes',
+            'product_category' => 'shoes',
             'product_description' => fake()->sentence(),
-            'product_image' => 'shoes1.jpg',
-            'product_image2' => 'shoes1.jpg',
-            'product_image3' => 'shoes1.jpg',
-            'product_image4' => 'shoes1.jpg',
+            'product_image' => 'shoes' . fake()->numberBetween(1, 4) . '.jpg',
+            'product_image2' => 'shoes' . fake()->numberBetween(1, 4) . '.jpg',
+            'product_image3' => 'shoes' . fake()->numberBetween(1, 4) . '.jpg',
+            'product_image4' => 'shoes' . fake()->numberBetween(1, 4) . '.jpg',
             'product_price' => fake()->randomFloat(2, 100, 200),
             'product_special_offer' => fake()->numberBetween(10, 70),
             'product_color' => fake()->safeColorName(),
