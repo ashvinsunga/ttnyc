@@ -26,4 +26,16 @@ class CartController extends Controller
 
         return redirect()->back()->with("success", "Product added to the cart.");
     }
+
+    public function cartUpdate(Request $request)
+    {
+        info($request->all());
+        $cart = session("cart");
+
+        $cart[$request->product_id]["quantity"] = $request->quantity;
+
+        session()->put("cart", $cart);
+
+        return response()->json(["success" => 1]);
+    }
 }

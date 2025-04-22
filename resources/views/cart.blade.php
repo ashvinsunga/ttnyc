@@ -8,6 +8,7 @@
             <h2 class="font-weight-bold">Your Cart</h2>
             <hr>
         </div>
+        @php $total = 0; @endphp
         @if (session('cart'))
             <table>
                 <tr>
@@ -17,7 +18,8 @@
                 </tr>
 
                 @foreach (session('cart') as $key => $details)
-                    <tr>
+                    @php $total = $total + $details['price'] * $details['quantity']; @endphp
+                    <tr data-id="{{ $key }}">
                         <td>
                             <div class="product-info">
                                 <img src="{{ asset('images/' . $details['image']) }}">
@@ -31,7 +33,8 @@
                         </td>
 
                         <td>
-                            <input type="number" value={{ $details['quantity'] }}>
+                            <input class="quantity" type="number" name="quantity" min="1"
+                                value={{ $details['quantity'] }}>
                             <a class="edit-btn" href="#">Edit</a>
                         </td>
 
@@ -47,11 +50,11 @@
             <table>
                 <tr>
                     <td>Subtotal</td>
-                    <td>$155</td>
+                    <td>{{ $total }}</td>
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td>$155</td>
+                    <td>{{ $total }}</td>
                 </tr>
             </table>
         </div>
@@ -62,4 +65,25 @@
             </button>
         </div>
     </section>
+@endsection
+
+@section('scripts')
+    <script type="text/javascript">
+        $("body").on("change", ".quantity", function(e) {
+            var elem = $(this);
+
+            $.ajax({
+                url: "{{ route('cart.update') }}",
+                method: "POST",
+                data: {
+                    _token: "{{ csrf_token() }}",
+                    product_id: elem.parent("tr").attr("data-id"),
+                    quantity: elem.val()
+                },
+                success: function(response) {
+                    console.log(response);
+                }
+            })
+        })
+    </script>
 @endsection

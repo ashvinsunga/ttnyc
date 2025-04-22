@@ -21,6 +21,8 @@ Route::get('/single_product/{id}', [ProductController::class, 'show'])->name('pr
 
 Route::get('/cart/{id}', [CartController::class, 'addToCart'])->name('add.to.cart');
 
+Route::post('/cart-update', [CartController::class, 'cartUpdate'])->name('cart.update');
+
 Route::get('/cart', function () {
     return view('cart');
 })->name('cart');
