@@ -1,14 +1,12 @@
 <?php
 
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    $products = Product::all();
-    $clothes = Product::where('product_category', 'clothes')->get();
-    return view('home', compact('products', 'clothes'));
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/shop', function () {
     return view('shop');
@@ -20,6 +18,8 @@ Route::get('/single_product/{id}', [ProductController::class, 'show'])->name('pr
 // Route::get('/single_product', function () {
 //     return view('single_product');
 // })->name('single_product');
+
+Route::get('/cart/{id}', [CartController::class, 'addToCart'])->name('add.to.cart');
 
 Route::get('/cart', function () {
     return view('cart');

@@ -28,7 +28,8 @@
                 <li class="nav-item">
                     <a class="nav-link icons {{ request()->routeIs('cart') ? 'active' : '' }}"
                         href="{{ route('cart') }}">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fa-solid fa-cart-shopping"> My Cart (
+                            <strong>{{ count(session('cart', [])) }}</strong>)</i>
                     </a>
                 </li>
 
@@ -51,15 +52,15 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
                                 <a class="dropdown-item" "
-                                                                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                                                                    Logout
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                        <form id="logout-form" method="POST" style="display: none;">
-                                                                            @csrf
-                                                                        </form>
-                                                                        </li>
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                            <form id="logout-form" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                            </li>
             @endguest
             </ul>
         </div>

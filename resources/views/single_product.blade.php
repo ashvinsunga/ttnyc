@@ -3,7 +3,9 @@
 @section('content')
     <section class="single-product my-5 pt-5">
         <div class="container">
-
+            @session('success')
+                <div class="alert alert-success">{{ $value }}</div>
+            @endsession
             <div class="row mt-5">
                 <div class="col-lg-5 col-md-6 col-sm-12">
                     <img src="{{ asset('images/' . $product->product_image) }}" id="mainImg" class="img-fluid pb-1">
@@ -27,8 +29,9 @@
                     <h6>Men/Shoes</h6>
                     <h3 class="py-4">{{ $product->product_name }}</h3>
                     <h2>{{ $product->product_price }}</h2>
-                    <input type="number" value="1" />
-                    <button class="buy-btn">Add to Cart</button>
+                    <input type="number" name="product_quantity" value="1" />
+                    <a href="{{ route('add.to.cart', $product->product_id) }}"> <button class="buy-btn"
+                            name="add_to_cart">Add to Cart</button> </a>
                     <h4 class="mt-5 mb-5">Product Details</h4>
                     <span>{{ $product->product_description }}</span>
                 </div>
