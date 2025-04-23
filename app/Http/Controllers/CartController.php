@@ -36,6 +36,8 @@ class CartController extends Controller
 
         session()->put("cart", $cart);
 
-        return response()->json(["success" => 1]);
+        $view = view("cart_items")->render();
+
+        return response()->json(["success" => $view]);
     }
 }
