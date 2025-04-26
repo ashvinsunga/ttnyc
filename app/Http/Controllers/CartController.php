@@ -16,7 +16,7 @@ class CartController extends Controller
 
         $cart[$id] = [
             "name" => $product->product_name,
-            "quantity" => 2,
+            "quantity" => $request->input('product_quantity'),
             "price" => $product->product_price,
             "image" => $product->product_image,
             "description" => $product->product_description,
@@ -29,13 +29,18 @@ class CartController extends Controller
 
     public function cartUpdate(Request $request)
     {
-        info($request->all());
+        // info($request->all());
+
         $cart = session("cart");
 
-        $cart[$request->product_id]["quantity"] = $request->quantity;
+        if ($request->type == "update") {
+            $cart[$request->product_id]["quantity"] = $request->quantity;
+        } else {
+            unset($cart[$request->product_id]);
+        }
+
 
         session()->put("cart", $cart);
-
         $view = view("cart_items")->render();
 
         return response()->json(["success" => $view]);

@@ -23,6 +23,7 @@ Route::get('/cart/{id}', [CartController::class, 'addToCart'])->name('add.to.car
 
 Route::post('/cart-update', [CartController::class, 'cartUpdate'])->name('cart.update');
 
+
 Route::get('/cart', function () {
     return view('cart');
 })->name('cart');

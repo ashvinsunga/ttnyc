@@ -26,12 +26,14 @@
                 </div>
 
                 <div class="col-lg-6 col-md-12 col-sm-12">
+
                     <h6>Men/Shoes</h6>
                     <h3 class="py-4">{{ $product->product_name }}</h3>
                     <h2>{{ $product->product_price }}</h2>
-                    <input type="number" name="product_quantity" value="1" />
-                    <a href="{{ route('add.to.cart', $product->product_id) }}"> <button class="buy-btn"
-                            name="add_to_cart">Add to Cart</button> </a>
+                    <form action="{{ route('add.to.cart', $product->product_id) }}" method="GET">
+                        <input type="number" name="product_quantity" value="1" />
+                        <button type="submit" class="buy-btn" name="add_to_cart">Add to Cart</button>
+                    </form>
                     <h4 class="mt-5 mb-5">Product Details</h4>
                     <span>{{ $product->product_description }}</span>
                 </div>
